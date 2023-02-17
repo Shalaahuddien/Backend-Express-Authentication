@@ -1,0 +1,113 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    //"id": 1,
+    //"uuid": 997,
+    "name": "Udin Al-adl",
+    "email": "cak@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+
+// get all users
+###
+GET http://localhost:5000/users
+
+
+// get single user
+###
+GET http://localhost:5000/users/ecab3b4d-3470-4a34-88ca-1e8760e3bc15
+
+
+###
+// Update a user
+PATCH http://localhost:5000/users/767193de-cd6b-45c2-b4bf-4b2beef4e6e7
+Content-Type: application/json
+
+{
+    "name": "S Daffa Dienul",
+    "email": "users@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "users"
+}
+
+
+###
+//delete a User
+DELETE http://localhost:5000/users/
+
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "users@gmail.com",
+    "password": "123456"
+}
+
+
+###
+// Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+
+###
+//
+GET http://localhost:5000/me
+
+
+###
+DELETE http://localhost:5000/logout
+
+
+###
+// Get All Products
+GET http://localhost:5000/products
+
+
+###
+// Get Single Products
+GET http://localhost:5000/products/eb8a291e-63a8-4193-a60b-7a07f962a79f
+
+
+
+###
+// Post Data Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": 999
+}
+
+
+
+###
+// Post Data Product
+PATCH http://localhost:5000/products/c9d9fe71-1a69-4e8f-934b-f33741c6e162
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 9749
+}
+
+
+
+###
+// 
+DELETE http://localhost:5000/products/c9d9fe71-1a69-4e8f-934b-f33741c6e162
